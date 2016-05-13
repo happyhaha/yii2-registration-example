@@ -89,3 +89,8 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+ul.navbar-nav button[type=submit]
+{
+    padding: 14px;
+}

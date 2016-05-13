@@ -32,7 +32,6 @@ class SiteController extends Controller
         if(isset($_POST['Signup']))
         {
             $model->attributes = Yii::$app->request->post('Signup');
-//            $model->email = $_POST['Signup']['email'];
 
             if($model->validate() && $model->signup())
             {

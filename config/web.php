@@ -8,22 +8,11 @@ $config = [
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '4eH2LRz3aZb4YUxAnhzZy7zM6hsW1LRw',
         ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\User', //этот класс (app\models\User в данном случае) обязательно должен имплементить (implements) IdentityInterface, а то залогинится не получится!
             'enableAutoLogin' => true,
-        ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -50,8 +39,10 @@ $config = [
     'params' => $params,
 ];
 
+
+
 if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
+    // конфигурации для development режима.
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
