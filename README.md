@@ -1,4 +1,4 @@
-Yii 2 Пример регистрации и аутентификации из [видео](https://www.youtube.com/playlist?list=PLa9lO_Eq-vZV7GQtlFyMQcHPTssEOP7Nq)
+Yii 2 Пример регистрации из [видео](https://www.youtube.com/playlist?list=PLa9lO_Eq-vZV7GQtlFyMQcHPTssEOP7Nq)
 ============================
 
 
